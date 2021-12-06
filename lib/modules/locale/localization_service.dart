@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:get/get.dart';
-import '/config/lang/lang_en.dart';
-import 'memory_service.dart';
+import 'lang/lang_en.dart';
+import '/data/services/memory_service.dart';
 
 class LocalizationService extends Translations {
   static const fallbackLocale = Locale('en');
@@ -15,18 +15,23 @@ class LocalizationService extends Translations {
     MemoryService _memoryService = Get.put(MemoryService());
     String? languageCode = _memoryService.languageCode;
     if (languageCode != null) {
-      updateLocale(languageCode);
+      _updateLocale(languageCode);
     }
   }
 
-  static saveLocale(String languageCode) {
+  static _saveLocale(String languageCode) {
     MemoryService _memoryService = Get.find();
     _memoryService.languageCode = languageCode;
   }
 
-  static updateLocale(String languageCode) {
+  static _updateLocale(String languageCode) {
     _locale = Locale(languageCode);
     Get.updateLocale(_locale!);
+  }
+
+  static changeLocale(String languageCode){
+    _updateLocale(languageCode);
+    _saveLocale(languageCode);
   }
 
   @override

@@ -4,7 +4,7 @@ import 'package:loader_overlay/loader_overlay.dart';
 import 'package:get/get.dart';
 import 'utils/get_pages.dart';
 import 'config/const.dart';
-import 'data/services/localization_service.dart';
+import 'modules/locale/localization_service.dart';
 import 'utils/binding.dart';
 
 class App extends StatelessWidget {

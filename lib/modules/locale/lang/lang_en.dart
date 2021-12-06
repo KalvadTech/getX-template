@@ -1,4 +1,4 @@
-import '../keys.dart';
+import '/config/keys.dart';
 
 const Map<String, String> englishTranslationsMap = {
   appName: 'App Name',
