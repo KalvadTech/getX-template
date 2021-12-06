@@ -3,7 +3,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:get/get.dart';
 import 'utils/get_pages.dart';
-import 'config/const.dart';
+import 'config/config.dart';
 import 'modules/locale/localization_service.dart';
 import 'utils/binding.dart';
 
