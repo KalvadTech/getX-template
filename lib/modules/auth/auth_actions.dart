@@ -11,7 +11,6 @@ class AuthActions {
 
   late AuthViewModel _authViewModel;
 
-
   AuthActions._() {
     _authViewModel = Get.find();
   }
@@ -32,8 +31,8 @@ class AuthActions {
     context.loaderOverlay.show();
     try {
       await _authViewModel.signUp();
-      Get.snackbar('Sign Up', 'Done Successfully Now Login');
       Get.back();
+      Get.snackbar('Sign Up', 'Done Successfully Now Login');
     } on AppException catch (e) {
       Get.snackbar('Authentication Failed', e.toString().tr);
     } finally {
@@ -44,6 +43,4 @@ class AuthActions {
   void toRegisterPage() {
     Get.toNamed('/register');
   }
-
-
 }

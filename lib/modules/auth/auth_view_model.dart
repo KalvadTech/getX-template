@@ -24,7 +24,6 @@ class AuthViewModel extends GetxController {
 
   Future signUp() async{
     _user = await _authService.mockSignUp(newUser);
-    authenticated();
   }
 
   authenticated(){
