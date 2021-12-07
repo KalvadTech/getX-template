@@ -1,5 +1,25 @@
 const String appName = 'App Name';
 
+/// inputs keys
+const String usernameLabelKey = 'usernameLabelKey';
+const String usernameHintKey = 'usernameLabelKey';
+const String emailLabelKey = 'emailLabelKey';
+const String emailHintKey = 'emailHintKey';
+const String passwordLabelKey = 'passwordLabelKey';
+const String passwordHintKey = 'passwordHintKey';
+const String phoneLabelKey = 'phoneLabelKey';
+const String phoneHintKey = 'phoneHintKey';
+
+
+/// validations keys
+const String emailEmptyMessageKey = 'emailEmptyMessage';
+const String emailNotValidMessageKey = 'emailNotValidMessage';
+const String passwordEmptyMessageKey = 'passwordEmptyMessage';
+const String passwordNotValidMessageKey = 'passwordNotValidMessage';
+const String nameEmptyMessageKey = 'nameEmptyMessage';
+const String usernameEmptyMessageKey = 'usernameEmptyMessage';
+
+
 /// errors keys
 const String apiErrorTitle = 'apiErrorTitle';
 const String networkErrorTitle = 'networkErrorTitle';

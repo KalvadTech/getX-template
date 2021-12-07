@@ -51,7 +51,7 @@ packages:
     source: hosted
     version: "1.15.0"
   connectivity:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: connectivity
       url: "https://pub.dartlang.org"
@@ -119,14 +119,14 @@ packages:
     source: hosted
     version: "1.0.0"
   flutter_spinkit:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_spinkit
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
   flutter_svg:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"
@@ -150,14 +150,14 @@ packages:
     source: hosted
     version: "4.5.1"
   get_storage:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: get_storage
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.3"
   google_fonts:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -192,7 +192,7 @@ packages:
     source: hosted
     version: "1.0.1"
   loader_overlay:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: loader_overlay
       url: "https://pub.dartlang.org"
