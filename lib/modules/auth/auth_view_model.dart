@@ -17,12 +17,12 @@ class AuthViewModel extends GetxController {
   AuthViewModel(this._authService);
 
   Future signIn() async{
-    _user = await _authService.mockSignIn('username!', 'password!');
+    _user = await _authService.mockSignIn(username!, password!);
     authenticated();
   }
 
   Future signUp() async{
-    _user = await _authService.mockSignUp('username!', 'password!');
+    _user = await _authService.mockSignUp(username!, password!);
     authenticated();
   }
 
