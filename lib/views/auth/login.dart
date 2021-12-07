@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:getx_starter/config/config.dart';
+import '/config/config.dart';
+import '/views/custom/custom_form.dart';
 import '/utils/validator.dart';
 import '/views/custom/custom-form-field.dart';
-import '/views/custom/custom_button.dart';
-import '/config/keys.dart';
 import '/views/custom/custom_text.dart';
 import '/modules/auth/auth.dart';
 
@@ -31,7 +30,9 @@ class LoginPage extends GetWidget<AuthViewModel> {
                   fit: BoxFit.contain,
                 ),
                 const CustomText(loginPageTitle),
-                Column(
+                CustomForm(
+                  onConfirm: () => login(context),
+                  buttonLabel: loginButtonLabel,
                   children: [
                     CustomFormField(
                       hint: usernameHintKey,
@@ -46,11 +47,6 @@ class LoginPage extends GetWidget<AuthViewModel> {
                       validator: InputsValidator.passwordValidator,
                     ),
                   ],
-                ),
-                const SizedBox(height: 24.0),
-                AuthButton(
-                  text: 'login',
-                  onPressed: () => login(context),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

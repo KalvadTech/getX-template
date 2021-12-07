@@ -36,3 +36,8 @@ const String checkNetworkFailedMessage = 'checkNetworkFailedMessage';
 const String homePageTitle = 'homePageTitle';
 const String loginPageTitle = 'loginPageTitle';
 const String registerPageTitle = 'registerPageTitle';
+
+/// buttons labels keys
+const String confirmButtonLabel = 'confirmButtonLabel';
+const String loginButtonLabel = 'loginButtonLabel';
+const String registerButtonLabel = 'registerButtonLabel';
