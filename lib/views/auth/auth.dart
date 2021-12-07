@@ -8,6 +8,7 @@ class Auth extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AuthHandler(onAuthenticated: HomePage(), onNotAuthenticated: LoginPage());
+    return AuthHandler(onAuthenticated: const HomePage(), onNotAuthenticated: LoginPage());
   }
+
 }
