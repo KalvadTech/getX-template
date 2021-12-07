@@ -1,0 +1,3 @@
+name: get_x_template
+description: A Flutter application template using getx for state management with pre defind modules for authentication, connections and localizations.
+
