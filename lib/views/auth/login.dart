@@ -40,6 +40,17 @@ class LoginPage extends GetWidget<AuthViewModel> {
                 text: 'login',
                 onPressed: () => login(context),
               ),
+              const Spacer(),
+              Row(
+                children: [
+                  const CustomText('You don\'t have account?'),
+                  TextButton(
+                    child: const CustomText('Register Now'),
+                    onPressed: AuthActions.instance.toRegisterPage,
+
+                  )
+                ],
+              )
             ],
           ),
         ),

@@ -13,6 +13,7 @@ class AuthViewModel extends GetxController {
   UserModel? get user => _user;
 
   String? username, password;
+  UserModel newUser = UserModel.empty();
 
   AuthViewModel(this._authService);
 
@@ -22,7 +23,7 @@ class AuthViewModel extends GetxController {
   }
 
   Future signUp() async{
-    _user = await _authService.mockSignUp(username!, password!);
+    _user = await _authService.mockSignUp(newUser);
     authenticated();
   }
 

@@ -15,7 +15,7 @@ class UserModel {
     this.phone,
     this.role,
     this.id,
-    this.token,
+    this.email,
     this.password,
   });
 
@@ -23,7 +23,7 @@ class UserModel {
   String? phone;
   String? role;
   String? id;
-  String? token;
+  String? email;
   String? password;
 
   UserModel copyWith({
@@ -31,7 +31,7 @@ class UserModel {
     String? phone,
     String? role,
     String? id,
-    String? token,
+    String? email,
     String? password,
   }) =>
       UserModel(
@@ -39,7 +39,7 @@ class UserModel {
           phone: phone,
           role: role,
           id: id,
-          token: token,
+          email: email,
           password: password);
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
@@ -47,7 +47,7 @@ class UserModel {
         username: json["username"],
         phone: json["phone"],
         role: json["role"],
-        token: json["token"],
+        email: json["email"],
       );
 
   factory UserModel.empty() => UserModel(
@@ -55,7 +55,7 @@ class UserModel {
         username: "",
         phone: "",
         role: "",
-        token: "",
+        email: "",
         password: "",
       );
 
@@ -63,6 +63,7 @@ class UserModel {
         "_id": id,
         "username":username,
         "phone": phone,
+        "email": email,
         "role": role,
       };
 }

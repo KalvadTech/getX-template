@@ -35,3 +35,4 @@ const String checkNetworkFailedMessage = 'checkNetworkFailedMessage';
 /// pages titles keys
 const String homePageTitle = 'homePageTitle';
 const String loginPageTitle = 'loginPageTitle';
+const String registerPageTitle = 'registerPageTitle';

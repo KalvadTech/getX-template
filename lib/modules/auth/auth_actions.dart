@@ -28,7 +28,7 @@ class AuthActions {
     }
   }
 
-  Future register(BuildContext context) async {
+  Future signUp(BuildContext context) async {
     context.loaderOverlay.show();
     try {
       await _authViewModel.signUp();
@@ -39,6 +39,10 @@ class AuthActions {
     } finally {
       context.loaderOverlay.hide();
     }
+  }
+
+  void toRegisterPage() {
+    Get.toNamed('/register');
   }
 
 

@@ -28,9 +28,9 @@ class AuthService extends GetConnect {
     return UserModel.fromJson({});
   }
 
-  Future<UserModel> mockSignUp(String username, String password) async {
+  Future<UserModel> mockSignUp(UserModel user) async {
     await Future.delayed(const Duration(seconds: 3));
-    return UserModel.fromJson({});
+    return UserModel.fromJson(user.toJson());
   }
 
 }
