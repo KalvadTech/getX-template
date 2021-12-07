@@ -12,6 +12,8 @@ const String phoneHintKey = 'phoneHintKey';
 
 
 /// validations keys
+const String phoneEmptyMessageKey = 'phoneEmptyMessageKey';
+const String phoneNotValidMessageKey = 'phoneNotValidMessageKey';
 const String emailEmptyMessageKey = 'emailEmptyMessage';
 const String emailNotValidMessageKey = 'emailNotValidMessage';
 const String passwordEmptyMessageKey = 'passwordEmptyMessage';
