@@ -1,1 +1,0 @@
-String logoPath = 'assets/icons/logo.svg';
