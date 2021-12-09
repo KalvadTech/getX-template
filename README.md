@@ -1,14 +1,14 @@
-# getx_starter
+# getX_starter
 
-A Flutter application tempelate using getx for state management with pre defined modules and widgets for authentcation, connection, localiztion and theme.
+A Flutter application template using getX for state management with pre defined modules and widgets for authentication, connection, localization and theme.
 
 
 ## Getting Started
 
-### Instalition
+### Installation
 you can use the template in two ways:-
 
-#### Basic
+#### Manual
 clone the project to your pc and then copy the src directory to your new flutter project lib directory. or only copy the desired modules.
 note: if you want to copy only modules make sure you copy the configuration files or other files you need.
 
@@ -34,11 +34,10 @@ after that you can call
 
 ```sh
 mason list
-
 /// or
-
 mason ls
-///output:
+
+///you should see womething like that in the output
 ///greeting - A Simple Greeting Template
 ///get_x_template - A Flutter application template using getx for state management with pre defind modules for authentication, connections and localizations.
 
@@ -54,7 +53,7 @@ all you have to do in every new flutter project is using command mason make get_
 
 
 #### packages
-remmeber to add these packages to your pubspec.yaml file.
+remembers to add these packages to your pubspec.yaml file.
 
 ```sh
 
@@ -70,7 +69,7 @@ remmeber to add these packages to your pubspec.yaml file.
 
 
 ### Modules
-you can find all pre defind modules inside the modules directory.
+you can find all pre defined modules inside the modules directory.
 
 
 #### Authentication
@@ -79,15 +78,15 @@ go to config/api-config and put your own api urls and routes then go to data/mod
 
 
 #### connections
-handle the connectivity, check if the user is connected to through wifi or mobile data and have internet access or no. contain two widget one for splash screen with connection check. one stack widget for showing connectivity status chenges, you can use it to show status throw all pages or for only one page.
+handle the connectivity, check if the user is connected to through wifi or mobile data and have internet access or no. contain two widget one for splash screen with connection check. one stack widget for showing connectivity status changes, you can use it to show status throw all pages or for only one page.
 
 
-#### Localiztions
-handle the languages changes, check what is the user prefered language in the app and handle the translation of the strings inside the app. all you have to do is go to modules/locale/localization_view_model and add your supported languages. Then add string keys to config/keys. Inside module/locale/lang create a new file for your keys translation. it's already ready for use for arabic and english.
+#### Localizations
+handle the languages changes, check what is the user preferred language in the app and handle the translation of the strings inside the app. all you have to do is go to modules/locale/localization_view_model and add your supported languages. Then add string keys to config/keys. Inside module/locale/lang create a new file for your keys translation. it's already ready for use for arabic and english.
 
 
 #### Theme
-handle the light and dark theme changing. contain custom widget for changing the theme. you can use ThemeSwich to implement a swich to change the theme from dark to light and vise versa or use the ThemeDrawerItem if you want a icon title leading widget.
+handle the light and dark theme changing. contain custom widget for changing the theme. you can use ThemeSwitch to implement a switch to change the theme from dark to light and vise versa or use the ThemeDrawerItem if you want a icon title leading widget.
 
 
 
