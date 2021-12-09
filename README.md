@@ -42,14 +42,11 @@ you should see something like that in the output
 get_x_template - A Flutter application template using getX for state management with pre defined modules for authentication, connections and localizations.
 
 
-now you can use template every where from you command line. create new flutter project open your terminal and navigate to lib folder and use command
+now you can use template in every flutter project from your command line. create new flutter project open your terminal then navigate to lib folder and use command
 
 ```sh
 mason make get_x_template
 ```
-
-all you have to do in every new flutter project is using command mason make get_x_template and you got you template ready to go.
-
 
 #### packages
 remembers to add these packages to your pubspec.yaml file.
