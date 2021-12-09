@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_starter/src/modules/theme/widgets/theme_switch.dart';
 import 'package:getx_starter/src/views/custom/custom_text.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -11,6 +12,7 @@ class CustomDrawer extends StatelessWidget {
         child: ListView(
       children: const [
         DrawerItem(title: 'Languages', routeName: '/languages', icon: Icons.language),
+        ThemeDrawerItem()
       ],
     ));
   }

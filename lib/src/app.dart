@@ -27,6 +27,7 @@ class App extends StatelessWidget {
         locale: Get.find<LocalizationViewModel>().locale,
         fallbackLocale: Get.find<LocalizationViewModel>().fallbackLocale,
         theme: theme,
+        darkTheme: darkTheme,
       ),
     );
   }

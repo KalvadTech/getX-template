@@ -17,3 +17,19 @@ ThemeData theme = createTheme(
   disabled: secondaryColor,
   error: Colors.red,
 );
+
+
+ThemeData darkTheme = createTheme(
+  brightness: Brightness.dark,
+  systemOverlayStyle: SystemUiOverlayStyle.light,
+  primarySwatch: primarySwatch,
+  background: Colors.black,
+  primaryText: Colors.white,
+  secondaryText: Colors.grey,
+  accentColor: secondaryColor,
+  divider: secondaryColor,
+  buttonBackground: Colors.black38,
+  buttonText: secondaryColor,
+  disabled: secondaryColor,
+  error: Colors.red,
+);
