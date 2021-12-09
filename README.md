@@ -34,14 +34,13 @@ after that you can call
 
 ```sh
 mason list
-/// or
+///or
 mason ls
 
-///you should see womething like that in the output
-///greeting - A Simple Greeting Template
-///get_x_template - A Flutter application template using getx for state management with pre defind modules for authentication, connections and localizations.
-
 ```
+you should see something like that in the output
+get_x_template - A Flutter application template using getX for state management with pre defined modules for authentication, connections and localizations.
+
 
 now you can use template every where from you command line. create new flutter project open your terminal and navigate to lib folder and use command
 
