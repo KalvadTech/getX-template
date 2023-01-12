@@ -53,13 +53,13 @@ remembers to add these packages to your pubspec.yaml file.
 
 ```sh
 
-  get: ^4.5.1
-  loader_overlay: ^2.0.4+3
+  get: ^4.6.5
+  loader_overlay: ^2.1.0
   flutter_spinkit: ^5.1.0
-  connectivity: ^3.0.6
-  flutter_svg: ^1.0.0
+  connectivity_plus: ^3.0.2
+  flutter_svg: ^1.1.6
   get_storage: ^2.0.3
-  google_fonts: ^2.1.0
+  google_fonts: ^3.0.1
   
 ```
 
