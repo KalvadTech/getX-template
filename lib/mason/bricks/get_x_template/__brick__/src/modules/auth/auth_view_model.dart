@@ -2,11 +2,11 @@ import 'package:get/get.dart';
 import '/src/data/models/user.dart';
 import 'auth_service.dart';
 
-enum AuthState{authenticated, notAuthenticated}
+enum AuthState{checking, authenticated, notAuthenticated}
 class AuthViewModel extends GetxController {
   late final AuthService _authService;
 
-  final Rx<AuthState> _authState = AuthState.notAuthenticated.obs;
+  final Rx<AuthState> _authState = AuthState.checking.obs;
   AuthState get authState => _authState.value;
 
   UserModel? _user;
@@ -15,7 +15,23 @@ class AuthViewModel extends GetxController {
   String? username, password;
   UserModel newUser = UserModel.empty();
 
-  AuthViewModel(this._authService);
+  AuthViewModel(this._authService){
+    checkSession();
+  }
+
+
+  Future<bool> checkSession() async {
+    _authState.value = AuthState.checking;
+    await Future.delayed(const Duration(milliseconds: 1000));
+    _user = await _authService.refreshSession();
+    if (_user != null) {
+      authenticated();
+      return true;
+    }
+    notAuthenticated();
+    return false;
+  }
+
 
   Future signIn() async{
     _user = await _authService.mockSignIn(username!, password!);
@@ -36,6 +52,10 @@ class AuthViewModel extends GetxController {
 
   bool isAuthenticated() {
     return _authState.value == AuthState.authenticated;
+  }
+
+  bool isChecking() {
+    return _authState.value == AuthState.checking;
   }
 
 

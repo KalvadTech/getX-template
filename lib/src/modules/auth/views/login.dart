@@ -29,20 +29,18 @@ class LoginPage extends GetWidget<AuthViewModel> {
                   height: MediaQuery.of(context).size.height / 4,
                   fit: BoxFit.contain,
                 ),
-                const CustomText(loginPageTitle),
+                const CustomText(tkLoginPage),
                 CustomForm(
                   onConfirm: () => login(context),
-                  buttonLabel: loginButtonLabel,
+                  buttonLabel: tkLoginBtn,
                   children: [
                     CustomFormField(
-                      hint: usernameHintKey,
-                      label: usernameLabelKey,
+                      label: tkUsername,
                       onSaved: (value) => controller.username = value,
                       validator: InputsValidator.usernameValidator,
                     ),
                     CustomFormField(
-                      hint: passwordHintKey,
-                      label: passwordLabelKey,
+                      label: tkPassword,
                       onSaved: (value) => controller.password = value,
                       validator: InputsValidator.passwordValidator,
                     ),

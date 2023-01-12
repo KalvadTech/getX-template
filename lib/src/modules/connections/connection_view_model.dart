@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
 import '/src/config/app_exception.dart';
 import '/src/config/keys.dart';
@@ -45,10 +45,10 @@ class ConnectionViewModel extends GetxController {
         break;
       case ConnectivityResult.none:
         connectionType.value = ConnectivityType.disconnected;
-        throw NetworkException(noInternetMessage);
+        throw NetworkException(tkNoInternetMsg);
       default:
         connectionType.value = ConnectivityType.disconnected;
-        throw NetworkException(checkNetworkFailedMessage);
+        throw NetworkException(tkCheckNetworkFailedMsg);
     }
   }
 
@@ -56,12 +56,12 @@ class ConnectionViewModel extends GetxController {
     try {
       final result = await InternetAddress.lookup('google.com');
       if (result.isEmpty) {
-        throw Exception(checkNetworkFailedMessage);
+        throw Exception(tkCheckNetworkFailedMsg);
       }
     }
     catch(e){
       connectionType.value = ConnectivityType.noInternet;
-      throw NetworkException(noInternetMessage);
+      throw NetworkException(tkNoInternetMsg);
     }
 
   }

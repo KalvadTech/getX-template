@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       drawer: const CustomDrawer(),
-      body: const Center(child: CustomText(homePageTitle),),
+      body: const Center(child: CustomText(tkHomePage),),
     );
   }
 }

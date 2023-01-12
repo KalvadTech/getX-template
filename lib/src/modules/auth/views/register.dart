@@ -24,32 +24,28 @@ class RegisterPage extends GetWidget<AuthViewModel> {
               height: MediaQuery.of(context).size.height / 4,
               fit: BoxFit.contain,
             ),
-            const CustomText(registerPageTitle),
+            const CustomText(tkRegisterPage),
             CustomForm(
               onConfirm: () => login(context),
-              buttonLabel: registerButtonLabel,
+              buttonLabel: tkRegisterBtn,
               children: [
                 CustomFormField(
-                  hint: usernameHintKey,
-                  label: usernameLabelKey,
+                  label: tkUsername,
                   onSaved: (value) => controller.newUser.username = value,
                   validator: InputsValidator.usernameValidator,
                 ),
                 CustomFormField(
-                  hint: phoneHintKey,
-                  label: phoneLabelKey,
+                  label: tkPhone,
                   onSaved: (value) => controller.newUser.phone = value,
                   validator: InputsValidator.phoneValidator,
                 ),
                 CustomFormField(
-                  hint: emailHintKey,
-                  label: emailLabelKey,
+                  label: tkEmail,
                   onSaved: (value) => controller.newUser.email = value,
                   validator: InputsValidator.emailValidator,
                 ),
                 CustomFormField(
-                  hint: passwordHintKey,
-                  label: passwordLabelKey,
+                  label: tkPassword,
                   onSaved: (value) => controller.newUser.password = value,
                   validator: InputsValidator.passwordValidator,
                 ),

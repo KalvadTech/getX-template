@@ -12,9 +12,9 @@ class InputsValidator{
 
   static String? phoneValidator(String? value){
     if(value == null || value.isEmpty) {
-      return phoneEmptyMessageKey.tr;
+      return tkPhoneEmptyMsg.tr;
     } else if(!_phoneRegExp.hasMatch(value)) {
-      return phoneNotValidMessageKey.tr;
+      return tkPhoneNotValidMsg.tr;
     } else {
       return null;
     }
@@ -22,9 +22,9 @@ class InputsValidator{
 
   static String? emailValidator(String? value){
     if(value == null || value.isEmpty) {
-      return emailEmptyMessageKey.tr;
+      return tkEmailEmptyMsg.tr;
     } else if(!_emailRegExp.hasMatch(value)) {
-      return emailNotValidMessageKey.tr;
+      return tkEmailNotValidMsg.tr;
     } else {
       return null;
     }
@@ -32,9 +32,9 @@ class InputsValidator{
 
   static String? passwordValidator(String? value){
     if(value == null || value.isEmpty) {
-      return passwordEmptyMessageKey.tr;
+      return tkPasswordEmptyMsg.tr;
     } else if(!_passwordRegExp.hasMatch(value)) {
-      return passwordNotValidMessageKey.tr;
+      return tkPasswordNotValidMsg.tr;
     } else {
       return null;
     }
@@ -42,7 +42,7 @@ class InputsValidator{
 
   static String? nameValidator(String? value){
     if(value == null || value.isEmpty) {
-      return nameEmptyMessageKey.tr;
+      return tkNameEmptyMsg.tr;
     } else {
       return null;
     }
@@ -50,7 +50,7 @@ class InputsValidator{
 
   static String? usernameValidator(String? value){
     if(value == null || value.isEmpty) {
-      return usernameEmptyMessageKey.tr;
+      return tkUsernameMsg.tr;
     } else {
       return null;
     }

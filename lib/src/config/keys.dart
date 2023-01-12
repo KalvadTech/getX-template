@@ -1,43 +1,39 @@
 const String appName = 'App Name';
 
 /// inputs keys
-const String usernameLabelKey = 'usernameLabelKey';
-const String usernameHintKey = 'usernameLabelKey';
-const String emailLabelKey = 'emailLabelKey';
-const String emailHintKey = 'emailHintKey';
-const String passwordLabelKey = 'passwordLabelKey';
-const String passwordHintKey = 'passwordHintKey';
-const String phoneLabelKey = 'phoneLabelKey';
-const String phoneHintKey = 'phoneHintKey';
+const String tkUsername = 'tkUsername';
+const String tkEmail = 'tkEmail';
+const String tkPassword = 'tkPassword';
+const String tkPhone = 'tkPhone';
 
 
 /// validations keys
-const String phoneEmptyMessageKey = 'phoneEmptyMessageKey';
-const String phoneNotValidMessageKey = 'phoneNotValidMessageKey';
-const String emailEmptyMessageKey = 'emailEmptyMessage';
-const String emailNotValidMessageKey = 'emailNotValidMessage';
-const String passwordEmptyMessageKey = 'passwordEmptyMessage';
-const String passwordNotValidMessageKey = 'passwordNotValidMessage';
-const String nameEmptyMessageKey = 'nameEmptyMessage';
-const String usernameEmptyMessageKey = 'usernameEmptyMessage';
+const String tkPhoneEmptyMsg = 'tkPhoneEmptyMsg';
+const String tkPhoneNotValidMsg = 'tkPhoneNotValidMsg';
+const String tkEmailEmptyMsg = 'tkEmailEmptyMsg';
+const String tkEmailNotValidMsg = 'tkEmailNotValidMsg';
+const String tkPasswordEmptyMsg = 'tkPasswordEmptyMsg';
+const String tkPasswordNotValidMsg = 'tkPasswordNotValidMsg';
+const String tkNameEmptyMsg = 'tkNameEmptyMsg';
+const String tkUsernameMsg = 'tkUsernameMsg';
 
 
 /// errors keys
-const String apiErrorTitle = 'apiErrorTitle';
-const String networkErrorTitle = 'networkErrorTitle';
-const String fetchingErrorTitle = 'fetchingErrorTitle';
-const String errorTitle = 'errorTitle';
-const String somethingWentWrongMessage = 'somethingWentWrongMessage';
-const String noInternetMessage = 'noInternetMessage';
-const String noInternetTryAgainMessage = 'noInternetTryAgainMessage';
-const String checkNetworkFailedMessage = 'checkNetworkFailedMessage';
+const String tkApiError = 'tkApiError';
+const String tkNetworkError = 'tkNetworkError';
+const String tkFetchingError = 'tkFetchingError';
+const String tkError = 'tkError';
+const String tkSomethingWentWrongMsg = 'tkSomethingWentWrongMsg';
+const String tkNoInternetMsg = 'tkNoInternetMsg';
+const String tkNoInternetTryAgainMsg = 'tkNoInternetTryAgainMsg';
+const String tkCheckNetworkFailedMsg = 'tkCheckNetworkFailedMsg';
 
 /// pages titles keys
-const String homePageTitle = 'homePageTitle';
-const String loginPageTitle = 'loginPageTitle';
-const String registerPageTitle = 'registerPageTitle';
+const String tkHomePage = 'tkHomePage';
+const String tkLoginPage = 'tkLoginPage';
+const String tkRegisterPage = 'tkRegisterPage';
 
 /// buttons labels keys
-const String confirmButtonLabel = 'confirmButtonLabel';
-const String loginButtonLabel = 'loginButtonLabel';
-const String registerButtonLabel = 'registerButtonLabel';
+const String tkConfirmBtn = 'tkConfirmBtn';
+const String tkLoginBtn = 'tkLoginBtn';
+const String tkRegisterBtn = 'tkRegisterBtn';

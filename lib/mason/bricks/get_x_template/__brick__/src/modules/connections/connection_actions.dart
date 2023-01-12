@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-import '/src/config/app_exception.dart';
-import '/src/config/keys.dart';
+import '../../utils/utils.dart';
 import 'connection_view_model.dart';
 
 class ConnectionActions {
@@ -19,14 +18,10 @@ class ConnectionActions {
   }
 
   Future<void> initSplash(String nextRouteString, int delayInSeconds) async {
-    try {
+    Utils.exceptionHandler(() async{
       await Future.delayed(Duration(seconds: delayInSeconds));
       await checkConnectivity();
       Get.offNamed(nextRouteString);
-    } on NetworkException catch (e) {
-      Get.snackbar(e.prefix.tr, e.message.tr);
-    } on Exception {
-      Get.snackbar(errorTitle.tr, somethingWentWrongMessage.tr);
-    }
+    });
   }
 }

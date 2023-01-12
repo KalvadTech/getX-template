@@ -14,15 +14,15 @@ class AppException implements Exception {
 
 class APIException extends AppException {
   APIException([String? message])
-      : super(message ?? "", apiErrorTitle);
+      : super(message ?? "", tkApiError);
 }
 
 class NetworkException extends AppException {
   NetworkException([String? message])
-      : super(message ?? "", networkErrorTitle);
+      : super(message ?? "", tkNetworkError);
 }
 
 class FetchingException extends AppException {
   FetchingException([String? message])
-      : super(message ?? "", fetchingErrorTitle);
+      : super(message ?? "", tkFetchingError);
 }
