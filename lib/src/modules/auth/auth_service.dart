@@ -83,6 +83,11 @@ class AuthService extends GetConnect {
     return UserModel.fromJson(response.body);
   }
 
+  Future logout() async {
+    await removeUserFromMemory();
+    await removeSessionFromMemory();
+  }
+
   Future<UserModel> mockSignIn(String username, String password) async {
     await Future.delayed(const Duration(seconds: 3));
     return UserModel.fromJson({});

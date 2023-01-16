@@ -3,6 +3,7 @@ import '/src/data/models/user.dart';
 import 'auth_service.dart';
 
 enum AuthState{checking, authenticated, notAuthenticated}
+
 class AuthViewModel extends GetxController {
   late final AuthService _authService;
 
@@ -19,9 +20,8 @@ class AuthViewModel extends GetxController {
     checkSession();
   }
 
-
   Future<bool> checkSession() async {
-    _authState.value = AuthState.checking;
+    checking();
     await Future.delayed(const Duration(milliseconds: 1000));
     _user = await _authService.refreshSession();
     if (_user != null) {
@@ -32,7 +32,6 @@ class AuthViewModel extends GetxController {
     return false;
   }
 
-
   Future signIn() async{
     _user = await _authService.mockSignIn(username!, password!);
     authenticated();
@@ -42,12 +41,16 @@ class AuthViewModel extends GetxController {
     _user = await _authService.mockSignUp(newUser);
   }
 
-  authenticated(){
+  void authenticated(){
     _authState.value = AuthState.authenticated;
   }
 
-  notAuthenticated(){
+  void notAuthenticated(){
     _authState.value = AuthState.notAuthenticated;
+  }
+
+  void checking(){
+    _authState.value = AuthState.checking;
   }
 
   bool isAuthenticated() {
@@ -58,5 +61,9 @@ class AuthViewModel extends GetxController {
     return _authState.value == AuthState.checking;
   }
 
+  void logout() {
+    _authService.logout();
+    notAuthenticated();
+  }
 
 }
