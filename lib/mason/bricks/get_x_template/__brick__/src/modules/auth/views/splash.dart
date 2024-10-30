@@ -9,7 +9,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SvgPicture.asset(logoPath, color: Theme.of(context).primaryColor, width: MediaQuery.of(context).size.height * 0.1,),
+        child: SvgPicture.asset(AssetsManager.logoPath, color: Theme.of(context).primaryColor, width: MediaQuery.of(context).size.height * 0.1,),
       ),
     );
   }

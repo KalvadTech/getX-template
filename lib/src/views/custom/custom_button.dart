@@ -1,23 +1,79 @@
 import 'package:flutter/material.dart';
-import '/src/config/config.dart';
+import '/src/utils/screen_utils.dart';
+import '../../config/config.dart';
 import 'custom_text.dart';
 
-class AuthButton extends StatelessWidget {
-  final String text;
+class CustomButton extends StatelessWidget {
+  final String? text;
+  final Widget? child;
   final VoidCallback? onPressed;
-  final double width;
+  final double? width;
+  final LinearGradient gradient;
+  final Color textColor;
+  final double fontSize;
+  final bool enabled;
+  final EdgeInsets? padding;
 
-  const AuthButton({Key? key, required this.text, this.onPressed, this.width = double.infinity}) : super(key: key);
+  const CustomButton({
+    Key? key,
+    this.text,
+    this.onPressed,
+    this.width = double.infinity,
+    this.gradient = ColorManager.buttonGradient,
+    this.textColor = ColorManager.titleColor,
+    this.fontSize = 16.0,
+    this.enabled = true,
+    this.padding,
+    this.child,
+  }) : super(key: key);
+
+  const CustomButton.positive({
+    Key? key,
+    this.text,
+    this.onPressed,
+    this.width,
+    this.gradient = ColorManager.positiveButtonGradient,
+    this.textColor = ColorManager.titleColor,
+    this.fontSize = 16.0,
+    this.enabled = true,
+    this.padding,
+    this.child,
+  }) : super(key: key);
+
+  const CustomButton.negative({
+    Key? key,
+    this.text,
+    this.onPressed,
+    this.width,
+    this.gradient = ColorManager.negativeButtonGradient,
+    this.textColor = ColorManager.titleColor,
+    this.fontSize = 16.0,
+    this.enabled = true,
+    this.padding,
+    this.child,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        child: CustomText(text),
-        style: authButtonStyle,
-      ),
+    return InkWell(
+      onTap: enabled ? onPressed : null,
+      child: Container(
+          width: width ?? ScreenUtils.getScreenWidth(context, 0.12),
+          padding: padding ?? EdgeInsets.all(ScreenUtils.getFontSize(context, 16)),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: enabled ? gradient.colors.last.withOpacity(0.15) : Colors.white.withOpacity(0.08),
+            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: enabled ? gradient.colors.last : Colors.grey)
+          ),
+          child: child ??
+              CustomText(
+                text ?? '',
+                color: textColor,
+                fontSize: fontSize,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0.2,
+              )),
     );
   }
 }

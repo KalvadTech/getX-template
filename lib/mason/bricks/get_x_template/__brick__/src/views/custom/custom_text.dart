@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '/src/utils/utils.dart';
+import '/src/config/config.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
   final Color? color;
-  final double? fontSize;
+  final double fontSize;
   final double? letterSpacing;
   final double? height;
   final int? maxLines;
@@ -12,13 +14,20 @@ class CustomText extends StatelessWidget {
   final String? fontFamily;
   final TextAlign? textAlign;
 
-  const CustomText(this.text, {Key? key, this.color, this.fontSize, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines}) : super(key: key);
+  const CustomText(this.text, {super.key, this.color = ColorManager.titleColor, this.fontSize = 14, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
+
+  const CustomText.title(this.text, {super.key, this.color = ColorManager.titleColor, this.fontSize = 24.0, this.fontWeight = FontWeight.w700, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
+
+  const CustomText.authTitle(this.text, {super.key, this.color = ColorManager.titleColor, this.fontSize = 16.0, this.fontWeight = FontWeight.w700, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
+
+  const CustomText.subtitle(this.text, {super.key, this.color = ColorManager.bodyColor, this.fontSize = 16.0, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
+
 
   @override
   Widget build(BuildContext context) {
     return Text(text.tr,
       style: TextStyle(
-          fontSize: fontSize,
+          fontSize: ScreenUtils.getFontSize(context, fontSize),
           color: color,
           fontWeight: fontWeight,
         letterSpacing: letterSpacing,

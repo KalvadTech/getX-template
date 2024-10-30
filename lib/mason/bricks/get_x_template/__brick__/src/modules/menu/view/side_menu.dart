@@ -21,9 +21,9 @@ class SideMenu extends GetWidget<MenuViewModel> {
                   alignment: Alignment.center,
                   height: MediaQuery.of(context).size.height * 0.2,
                   child: SvgPicture.asset(
-                    logoPath,
+                    AssetsManager.logoPath,
                     height: MediaQuery.of(context).size.height * 0.2,
-                    color: Theme.of(context).primaryColor,
+                    colorFilter: ColorFilter.mode(Theme.of(context).primaryColor, BlendMode.srcIn),
                   ),
                 ),
                 controller.expanded

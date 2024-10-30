@@ -20,7 +20,7 @@ class RegisterPage extends GetWidget<AuthViewModel> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SvgPicture.asset(
-              logoPath,
+              AssetsManager.logoPath,
               height: MediaQuery.of(context).size.height / 4,
               fit: BoxFit.contain,
             ),

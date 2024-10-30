@@ -14,7 +14,7 @@ class AuthMiddleware extends GetMiddleware {
     isAuthenticated = Get.find<AuthViewModel>().isAuthenticated();
     log('isAuthenticated: $isAuthenticated');
     if (isAuthenticated == false) {
-      return const RouteSettings(name: initialRoute);
+      return const RouteSettings(name: RouteManager.initialRoute);
     }
     return null;
   }

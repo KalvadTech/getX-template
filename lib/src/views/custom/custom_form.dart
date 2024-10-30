@@ -23,7 +23,7 @@ class CustomForm extends StatelessWidget {
         children: [
           ...children,
           const SizedBox(height: 24.0),
-          AuthButton(
+          CustomButton.positive(
             text: buttonLabel ?? tkConfirmBtn,
             onPressed: confirm,
           )

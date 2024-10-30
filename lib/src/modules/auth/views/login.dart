@@ -25,7 +25,7 @@ class LoginPage extends GetWidget<AuthViewModel> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SvgPicture.asset(
-                  logoPath,
+                  AssetsManager.logoPath,
                   height: MediaQuery.of(context).size.height / 4,
                   fit: BoxFit.contain,
                 ),
@@ -51,8 +51,8 @@ class LoginPage extends GetWidget<AuthViewModel> {
                   children: [
                     const CustomText('You don\'t have account?'),
                     TextButton(
-                      child: const CustomText('Register Now'),
                       onPressed: AuthActions.instance.toRegisterPage,
+                      child: const CustomText('Register Now'),
                     )
                   ],
                 )
