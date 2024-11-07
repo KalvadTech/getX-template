@@ -8,7 +8,7 @@ class AssetsManager {
 
   // **Images**
   /// Path for the Opaala logo in white.
-  static const String logoPath = 'assets/images/opaala_logo_white.png';
+  static const String logoPath = 'assets/icons/logo.svg';
 
   /// Path for the application icon.
   static const String appIconPath = 'assets/icons/opaala.svg';

@@ -52,7 +52,8 @@ class ConnectionViewModel extends GetxController {
 
   /// Checks the initial connectivity status and updates the state.
   Future<void> getConnectivity() async {
-    var connectivityResult = await _connectivity.checkConnectivity();
+    var connectivityResult = await _connectivity.checkConnectivity(); // first call always return no internet
+    connectivityResult = await _connectivity.checkConnectivity();
     await _updateState(connectivityResult);
   }
 

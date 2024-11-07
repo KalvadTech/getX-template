@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_starter/src/essentials/config/action_presenter.dart';
 import 'package:getx_starter/src/utils/route_manager.dart';
-import '/src/config/app_exception.dart';
 import '../controllers/auth_view_model.dart';
 
 class AuthActions extends ActionPresenter {

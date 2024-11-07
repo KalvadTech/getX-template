@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../connection.dart';
 import '/src/config/assets.dart';
 
@@ -28,7 +29,7 @@ class _ConnectivityCheckerSplashState extends State<ConnectivityCheckerSplash> {
           tryAgainAction: _init,
           connectedWidget: Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Image.asset(
+            child: SvgPicture.asset(
               AssetsManager.logoPath,
               height: MediaQuery.of(context).size.height / 3,
               fit: BoxFit.contain,
