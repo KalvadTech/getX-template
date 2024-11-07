@@ -47,6 +47,10 @@ class RouteManager {
         binding: AuthBindings(),
       ),
       GetPage(
+        name: registerRoute,
+        page: () => const RegisterPage(),
+      ),
+      GetPage(
         name: menuRoute,
         page: () => const MenuPage(),
         binding: MenuBindings(),

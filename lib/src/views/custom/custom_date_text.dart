@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '/src/config/colors.dart';
 import '/src/config/config.dart';
 import '/src/utils/screen_utils.dart';
 import 'package:timeago/timeago.dart' as timeago;

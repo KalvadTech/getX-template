@@ -50,6 +50,7 @@ class AuthViewModel extends GetxController {
       update(); // Update GetX UI
       return true;
     }
+    notAuthenticated();
     return false;
   }
 

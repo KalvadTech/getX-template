@@ -26,7 +26,7 @@ class ColorManager {
   static const Color secondaryColor = Color(0xFFEA6969);
   static const Color appBarColor = Colors.white;
   static const Color iconsColor = Colors.white;
-  static const Color titleColor = Colors.black;
+  static const Color titleColor = Colors.white;
   static const Color bodyColor = Colors.grey;
   static const Color buttonColor = Color(0xFF004843);
   static const Color lightButtonColor = Color(0xFF00A79B);

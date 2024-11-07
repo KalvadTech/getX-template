@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/src/utils/utils.dart';
-import '/src/config/config.dart';
+import '/src/config/colors.dart';
+import '/src/utils/screen_utils.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
@@ -22,6 +22,7 @@ class CustomText extends StatelessWidget {
 
   const CustomText.subtitle(this.text, {super.key, this.color = ColorManager.bodyColor, this.fontSize = 16.0, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
 
+  const CustomText.black(this.text, {super.key, this.color = ColorManager.bodyColor, this.fontSize = 12.0, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class CustomTranslatedText extends StatelessWidget {
   final String? fontFamily;
   final TextAlign? textAlign;
 
-  const CustomTranslatedText({ required this.textEn, required this.textAr, Key? key, this.color, this.fontSize, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines}) : super(key: key);
+  const CustomTranslatedText({ required this.textEn, required this.textAr, super.key, this.color, this.fontSize, this.fontWeight, this.height, this.letterSpacing, this.fontFamily, this.textAlign, this.maxLines});
 
   @override
   Widget build(BuildContext context) {

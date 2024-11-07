@@ -4,7 +4,7 @@ import '/src/modules/menu/view/side_menu.dart';
 import '/src/modules/menu/menu.dart';
 
 class MenuPage extends StatelessWidget {
-  const MenuPage({Key? key}) : super(key: key);
+  const MenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {

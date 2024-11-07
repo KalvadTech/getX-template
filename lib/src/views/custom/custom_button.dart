@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
   final EdgeInsets? padding;
 
   const CustomButton({
-    Key? key,
+    super.key,
     this.text,
     this.onPressed,
     this.width = double.infinity,
@@ -25,10 +25,10 @@ class CustomButton extends StatelessWidget {
     this.enabled = true,
     this.padding,
     this.child,
-  }) : super(key: key);
+  });
 
   const CustomButton.positive({
-    Key? key,
+    super.key,
     this.text,
     this.onPressed,
     this.width,
@@ -38,10 +38,10 @@ class CustomButton extends StatelessWidget {
     this.enabled = true,
     this.padding,
     this.child,
-  }) : super(key: key);
+  });
 
   const CustomButton.negative({
-    Key? key,
+    super.key,
     this.text,
     this.onPressed,
     this.width,
@@ -51,7 +51,8 @@ class CustomButton extends StatelessWidget {
     this.enabled = true,
     this.padding,
     this.child,
-  }) : super(key: key);
+  });
+
 
   @override
   Widget build(BuildContext context) {

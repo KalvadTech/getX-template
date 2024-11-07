@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/src/essentials/config/api_response.dart';
+import '../../essentials/config/api_response.dart';
 import 'custom_text.dart';
 
 class ApiHandler extends StatelessWidget {

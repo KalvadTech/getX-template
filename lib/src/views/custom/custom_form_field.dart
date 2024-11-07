@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/src/config/config.dart';
-import '/src/utils/utils.dart';
+import '/src/utils/screen_utils.dart';
 
 class CustomFormField extends StatelessWidget {
   final TextEditingController? controller;
@@ -36,7 +36,7 @@ class CustomFormField extends StatelessWidget {
     this.decoration,
     this.onChanged,
     this.initialValue,
-    this.backgroundColor = ColorManager.darkBackgroundColor,
+    this.backgroundColor = ColorManager.titleColor,
     this.textColor = ColorManager.bodyColor,
     this.fontSize = 14,
     this.keyboardType,

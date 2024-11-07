@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import '/src/views/custom/customs.dart';
 import '/src/config/config.dart';
-import '/src/views/custom/custom_form.dart';
 import '/src/utils/validator.dart';
-import '/src/views/custom/custom-form-field.dart';
-import '/src/views/custom/custom_text.dart';
 import '/src/modules/auth/auth.dart';
 
 class LoginPage extends GetWidget<AuthViewModel> {
   final _formKey = GlobalKey<FormState>();
 
-  LoginPage({Key? key}) : super(key: key);
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,22 +28,17 @@ class LoginPage extends GetWidget<AuthViewModel> {
                   fit: BoxFit.contain,
                 ),
                 const CustomText(tkLoginPage),
-                CustomForm(
-                  onConfirm: () => login(context),
-                  buttonLabel: tkLoginBtn,
-                  children: [
-                    CustomFormField(
-                      label: tkUsername,
-                      onSaved: (value) => controller.username = value,
-                      validator: InputsValidator.usernameValidator,
-                    ),
-                    CustomFormField(
-                      label: tkPassword,
-                      onSaved: (value) => controller.password = value,
-                      validator: InputsValidator.passwordValidator,
-                    ),
-                  ],
+                CustomFormField(
+                  label: tkUsername,
+                  onSaved: (value) => controller.username = value,
+                  validator: InputsValidator.usernameValidator,
                 ),
+                CustomFormField(
+                  label: tkPassword,
+                  onSaved: (value) => controller.password = value,
+                  validator: InputsValidator.passwordValidator,
+                ),
+                CustomButton(text: tkLoginBtn, onPressed: () => _login(context)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -64,7 +57,7 @@ class LoginPage extends GetWidget<AuthViewModel> {
     );
   }
 
-  void login(BuildContext context) {
+  void _login(BuildContext context) {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
       AuthActions.instance.signIn(context);
