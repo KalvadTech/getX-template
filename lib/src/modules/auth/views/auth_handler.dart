@@ -8,11 +8,11 @@ class AuthHandler extends GetWidget<AuthViewModel> {
   final Widget onNotAuthenticated;
 
   const AuthHandler({
-    Key? key,
+    super.key,
     required this.onChecking,
     required this.onAuthenticated,
     required this.onNotAuthenticated,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

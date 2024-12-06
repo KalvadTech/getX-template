@@ -1,2 +1,2 @@
-export 'theme_service.dart';
-export 'theme_view_model.dart';
+export 'data/theme_service.dart';
+export 'controllers/theme_view_model.dart';
