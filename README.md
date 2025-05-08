@@ -1,4 +1,4 @@
-# getX_starter
+# getX_template
 
 A Flutter application template using getX for state management with pre defined modules and widgets for authentication, connection, localization and theme.
 
